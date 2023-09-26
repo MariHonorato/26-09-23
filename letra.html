@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Letra - Stopots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #7316be;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #da790a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e6b928;
+        }
+        #letra {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sorteio de Letra - Stopots</h1>
+    <button id="sortear" onclick="sortearLetra()">Sortear Letra</button>
+    <div id="letra"></div>
+
+    <script>
+        function sortearLetra() {
+            const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const letraSorteada = letras[Math.floor(Math.random() * letras.length)];
+            document.getElementById("letra").textContent = letraSorteada;
+        }
+    </script>
+</body>
+</html>
